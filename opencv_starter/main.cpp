@@ -19,15 +19,14 @@ int main(int argc, const char * argv[])
     cv::waitKey(0);
     */
     
-    //赤い画像を用意
-    cv::Mat red(cv::Size(320, 240), CV_8UC3, cv::Scalar(0, 0, 255));
-    //Redウィンドウを作成
-    cv::namedWindow("Red", cv::WINDOW_AUTOSIZE);
-    //Redウィンドウに赤画像を表示
-    cv::imshow("Red", red);
-    //ユーザの入力を待つ
+    cv::Mat black(cv::Size(480,480), CV_8UC3, cv::Scalar(0,0,0));
+    
+    cv::namedWindow("BlackBoard", cv::WINDOW_AUTOSIZE);
+    
+    cv::imshow("BlackBoard", black);
+    
     cv::waitKey(0);
-    //全てのウィンドウを閉じる
+    
     cv::destroyAllWindows();
     
     return 0;
