@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DB7C90781F6D666C006B9B0B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB7C90771F6D666C006B9B0B /* main.cpp */; };
+		DBB1DE601F6D6E1F009F349C /* libopencv_core.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB1DE5F1F6D6E1F009F349C /* libopencv_core.3.3.0.dylib */; };
+		DBB1DE621F6D6E42009F349C /* libopencv_highgui.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB1DE611F6D6E42009F349C /* libopencv_highgui.3.3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		DB7C90741F6D666C006B9B0B /* opencv_starter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = opencv_starter; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB7C90771F6D666C006B9B0B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DBB1DE5F1F6D6E1F009F349C /* libopencv_core.3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.3.3.0.dylib; path = ../../../../../usr/local/Cellar/opencv/3.3.0_3/lib/libopencv_core.3.3.0.dylib; sourceTree = "<group>"; };
+		DBB1DE611F6D6E42009F349C /* libopencv_highgui.3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.3.3.0.dylib; path = ../../../../../usr/local/Cellar/opencv/3.3.0_3/lib/libopencv_highgui.3.3.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB1DE601F6D6E1F009F349C /* libopencv_core.3.3.0.dylib in Frameworks */,
+				DBB1DE621F6D6E42009F349C /* libopencv_highgui.3.3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				DB7C90761F6D666C006B9B0B /* opencv_starter */,
 				DB7C90751F6D666C006B9B0B /* Products */,
+				DBB1DE5E1F6D6E1F009F349C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +67,15 @@
 				DB7C90771F6D666C006B9B0B /* main.cpp */,
 			);
 			path = opencv_starter;
+			sourceTree = "<group>";
+		};
+		DBB1DE5E1F6D6E1F009F349C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBB1DE611F6D6E42009F349C /* libopencv_highgui.3.3.0.dylib */,
+				DBB1DE5F1F6D6E1F009F349C /* libopencv_core.3.3.0.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +236,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = MSY3YM2578;
+				HEADER_SEARCH_PATHS = "/usr/local/Cellar/opencv/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/opencv/3.3.0_3/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -228,6 +249,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = MSY3YM2578;
+				HEADER_SEARCH_PATHS = "/usr/local/Cellar/opencv/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/opencv/3.3.0_3/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -251,6 +277,7 @@
 				DB7C907D1F6D666C006B9B0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
